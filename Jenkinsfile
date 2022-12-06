@@ -9,6 +9,7 @@ pipeline {
                 sh 'kubectl version --client'
                 sh 'kubectl apply -k ./'
                 sh 'minikube service wordpress --url'
+                sh 'sleep 5'
                 sh 'kubectl get deploy'
                 sh 'echo ------------ END Deploy -----------'
             }
